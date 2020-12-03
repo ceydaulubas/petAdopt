@@ -7,23 +7,23 @@ const Task = require("../models/task.model"); // <== !!!
 
 /* POST - creates a new project */
 router.post("/projects", (req, res) => {
-  const { title, description } = req.body;
+  const { title, description, imageUrl } = req.body;
+  console.log("body", req.body);
 
   Project.create({
     title,
     description,
+    imageUrl,
     tasks: [],
-    owner: req.user._id, 
+    owner: req.user._id, // Add this after finishing authentication
   })
     .then((response) => {
-      res.status(200).send(response);
+      res.status(200).json(response);
     })
-
     .catch((err) => {
       res.status(500).json(err);
     });
 });
-
 
 /* GET - retrieves all the projects from the database */
 router.get("/projects", (req, res) => {
@@ -59,6 +59,26 @@ router.get("/projects/:id", (req, res) => {
     });
 });
 
+/* PUT route => to update a specific project */
+router.put("/projects/:id", (req, res) => {
+  const { id } = req.params;
+
+  // Check if the incoming id is a valid ObjectId type
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).json({ message: "Specified id is not valid" });
+    return;
+  }
+
+  Project.findByIdAndUpdate(id, req.body)
+    .then(() => {
+      res.status(200).json({
+        message: `Project with ${id} is updated successfully.`,
+      });
+    })
+    .catch((error) => {
+      res.status(500).json(error);
+    });
+});
 
 // DELETE route => to delete a specific project
 router.delete("/projects/:id", (req, res) => {
@@ -80,7 +100,5 @@ router.delete("/projects/:id", (req, res) => {
       res.status(500).json(error);
     });
 });
-
-
 
 module.exports = router;
