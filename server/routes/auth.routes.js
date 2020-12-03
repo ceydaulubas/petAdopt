@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 
 const passport = require("passport");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // require the user model !!!!
 const User = require("../models/user.model");
