@@ -52,7 +52,7 @@ router.get("/pets/:id", (req, res) => {
 
   // Our projects have array of tasks' ids and
   // we can use .populate() method to get the whole task objects
-  Project.findById(id)
+  Pets.findById(id)
     .populate("owner")
     .then((pet) => {
       res.status(200).json(pet);
