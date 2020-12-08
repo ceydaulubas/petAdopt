@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const router = Router();
 
 const Pets = require("../models/pet.model");
-// const Task = require("../models/task.model"); // <== !!!
 
 /* POST - creates a new pets*/
 router.post("/pets", (req, res) => {
@@ -18,7 +17,7 @@ router.post("/pets", (req, res) => {
     age,
     imageUrl,
     // owner: req.user._id, // Add this after finishing authentication
-    owner:"5fc8f70e42d4ff4f70c89b57",
+    owner:"5fc8f70e42d4ff4f70c89b57", 
   })
     .then((response) => {
       res.status(200).json(response);
@@ -40,7 +39,7 @@ router.get("/pets", (req, res) => {
     });
 });
 
-/* GET route => to get a specific project/detailed view */
+/* GET route => to get a specific pet/detailed view */
 router.get("/pets/:id", (req, res) => {
   const { id } = req.params;
 
@@ -50,7 +49,7 @@ router.get("/pets/:id", (req, res) => {
     return;
   }
 
-  // Our projects have array of tasks' ids and
+  // Our pets have array of tasks' ids and
   // we can use .populate() method to get the whole task objects
   Pets.findById(id)
     .populate("owner")
@@ -62,7 +61,7 @@ router.get("/pets/:id", (req, res) => {
     });
 });
 
-/* PUT route => to update a specific project */
+/* PUT route => to update a specific pet */
 router.put("/pets/:id", (req, res) => {
   const { id } = req.params;
 
@@ -72,10 +71,10 @@ router.put("/pets/:id", (req, res) => {
     return;
   }
 
-  Project.findByIdAndUpdate(id, req.body)
+  Pets.findByIdAndUpdate(id, req.body)
     .then(() => {
       res.status(200).json({
-        message: `Project with ${id} is updated successfully.`,
+        message: `Pet with ${id} is updated successfully.`,
       });
     })
     .catch((error) => {
@@ -83,7 +82,7 @@ router.put("/pets/:id", (req, res) => {
     });
 });
 
-// DELETE route => to delete a specific project
+// DELETE route => to delete a specific pet
 router.delete("/pets/:id", (req, res) => {
   const { id } = req.params;
 
@@ -93,10 +92,10 @@ router.delete("/pets/:id", (req, res) => {
     return;
   }
 
-  Project.findByIdAndRemove(id)
+  Pets.findByIdAndRemove(id)
     .then(() => {
       res.status(200).json({
-        message: `Project with ${id} is removed successfully.`,
+        message: `Pet with ${id} is removed successfully.`,
       });
     })
     .catch((error) => {
