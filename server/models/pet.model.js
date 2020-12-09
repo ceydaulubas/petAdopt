@@ -9,6 +9,7 @@ const petSchema = new Schema(
     color: String,
     age: String,
     imageUrl: String, 
+    comment:String,
     owner: { type: Schema.Types.ObjectId, ref: "User" }, 
   },
   {
