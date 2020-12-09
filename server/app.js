@@ -69,8 +69,6 @@ app.locals.title = "Express - Generated with IronGenerator";
 
 // Routes Middleware
 app.use("/api", require("./routes/index"));
-app.use("/api", require("./routes/project.routes"));
-app.use("/api", require("./routes/task.routes"));
 app.use("/api", require("./routes/auth.routes"));
 app.use("/api", require("./routes/fileUpload.routes"));
 app.use("/api", require("./routes/pet.routes"));

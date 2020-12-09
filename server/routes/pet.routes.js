@@ -16,8 +16,7 @@ router.post("/pets", (req, res) => {
     color,
     age,
     imageUrl,
-    // owner: req.user._id, // Add this after finishing authentication
-    owner:"5fc8f70e42d4ff4f70c89b57", 
+    owner: req.user._id, 
   })
     .then((response) => {
       res.status(200).json(response);
@@ -29,7 +28,14 @@ router.post("/pets", (req, res) => {
 
 /* GET - retrieves all the pets from the database */
 router.get("/pets", (req, res) => {
-  Pets.find()
+  console.log("test", req.user);
+  let querySearch ={};
+  if(req.query){
+    querySearch = {animal: req.query.animal}
+  }
+  const value= req.query;
+  console.log(value);
+  Pets.find(querySearch)
     .populate("owner")
     .then((allThePets) => {
       res.status(200).json(allThePets);

@@ -11,8 +11,8 @@ const User = require("../models/user.model");
  *                                                   SIGN UP ROUTE                                                      *
  *********************************************************************************************************************/
 router.post("/signup", (req, res) => {
-    const { username, email, phone, password } = req.body;
-  
+    const { username, email, phone, imageUrl, password } = req.body;
+  console.log(req.body);
     if (!username || !email || !phone ||!password ) {
       res.status(400).json({ message: "All fields are mandatory. Please fill the all blanks" });
       return;
@@ -50,6 +50,7 @@ router.post("/signup", (req, res) => {
         username: username,
         email: email,
         phone: phone,
+        imageUrl: imageUrl,
         password: hashPass,
       });
   
@@ -105,7 +106,7 @@ router.post("/signup", (req, res) => {
           res.status(500).json({ message: "Session save went bad." });
           return;
         }
-  
+        console.log(theUser)
         // We are now logged in (that's why we can also send req.user)
         res.status(200).json(theUser);
       });

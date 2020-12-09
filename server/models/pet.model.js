@@ -9,7 +9,7 @@ const petSchema = new Schema(
     color: String,
     age: String,
     imageUrl: String, 
-    owner: { type: Schema.Types.ObjectId, ref: "User" }, // owner from usermodel
+    owner: { type: Schema.Types.ObjectId, ref: "User" }, 
   },
   {
     timestamps: true,

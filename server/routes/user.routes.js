@@ -2,20 +2,18 @@ const { Router } = require("express");
 const mongoose = require("mongoose");
 const router = Router();
 
-const Project = require("../models/project.model");
-const Task = require("../models/task.model"); // <== !!!
+const Users = require("../models/user.model");
 
-/* POST - creates a new project */
-router.post("/projects", (req, res) => {
-  const { title, description, imageUrl } = req.body;
+/* POST - creates a new user*/
+router.post("/user", (req, res) => {
+  const { animal, breed, gender, color, age, imageUrl } = req.body;
   console.log("body", req.body);
 
-  Project.create({
-    title,
-    description,
+  Users.create({
+    username,
+    email,
+    phone,
     imageUrl,
-    tasks: [],
-    owner: req.user._id, // Add this after finishing authentication
   })
     .then((response) => {
       res.status(200).json(response);
@@ -25,20 +23,20 @@ router.post("/projects", (req, res) => {
     });
 });
 
-/* GET - retrieves all the projects from the database */
-router.get("/projects", (req, res) => {
-  Project.find()
-    .populate("tasks")
-    .then((allTheProjects) => {
-      res.status(200).json(allTheProjects);
+/* GET - retrieves all the users from the database */
+router.get("/user", (req, res) => {
+  Users.find()
+    .populate("owner")
+    .then((allTheUsers) => {
+      res.status(200).json(allTheUsers);
     })
     .catch((err) => {
       res.status(500).json(err);
     });
 });
 
-/* GET route => to get a specific project/detailed view */
-router.get("/projects/:id", (req, res) => {
+/* GET route => to get a specific user/detailed view */
+router.get("/user/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
@@ -47,20 +45,20 @@ router.get("/projects/:id", (req, res) => {
     return;
   }
 
-  // Our projects have array of tasks' ids and
+  // Our users have array of tasks' ids and
   // we can use .populate() method to get the whole task objects
-  Project.findById(id)
-    .populate("tasks")
-    .then((project) => {
-      res.status(200).json(project);
+  Users.findById(id)
+    .populate("owner")
+    .then((user) => {
+      res.status(200).json(user);
     })
     .catch((error) => {
       res.status(500).json(error);
     });
 });
 
-/* PUT route => to update a specific project */
-router.put("/projects/:id", (req, res) => {
+/* PUT route => to update a specific user */
+router.put("/user/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
@@ -69,10 +67,10 @@ router.put("/projects/:id", (req, res) => {
     return;
   }
 
-  Project.findByIdAndUpdate(id, req.body)
+  Users.findByIdAndUpdate(id, req.body)
     .then(() => {
       res.status(200).json({
-        message: `Project with ${id} is updated successfully.`,
+        message: `User with ${id} is updated successfully.`,
       });
     })
     .catch((error) => {
@@ -80,8 +78,8 @@ router.put("/projects/:id", (req, res) => {
     });
 });
 
-// DELETE route => to delete a specific project
-router.delete("/projects/:id", (req, res) => {
+// DELETE route => to delete a specific user
+router.delete("/user/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
@@ -90,10 +88,10 @@ router.delete("/projects/:id", (req, res) => {
     return;
   }
 
-  Project.findByIdAndRemove(id)
+  Users.findByIdAndRemove(id)
     .then(() => {
       res.status(200).json({
-        message: `Project with ${id} is removed successfully.`,
+        message: `User with ${id} is removed successfully.`,
       });
     })
     .catch((error) => {
