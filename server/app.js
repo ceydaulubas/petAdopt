@@ -72,5 +72,6 @@ app.use("/api", require("./routes/index"));
 app.use("/api", require("./routes/auth.routes"));
 app.use("/api", require("./routes/fileUpload.routes"));
 app.use("/api", require("./routes/pet.routes"));
+app.use("/api", require("./routes/user.routes"));
 
 module.exports = app;

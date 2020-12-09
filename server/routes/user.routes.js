@@ -4,27 +4,27 @@ const router = Router();
 
 const Users = require("../models/user.model");
 
-/* POST - creates a new user*/
-router.post("/user", (req, res) => {
-  const { animal, breed, gender, color, age, imageUrl } = req.body;
-  console.log("body", req.body);
+// /* POST - creates a new user*/
+// router.post("/user", (req, res) => {
+//   const { animal, breed, gender, color, age, imageUrl } = req.body;
+//   console.log("body", req.body);
 
-  Users.create({
-    username,
-    email,
-    phone,
-    imageUrl,
-  })
-    .then((response) => {
-      res.status(200).json(response);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
+//   Users.create({
+//     username,
+//     email,
+//     phone,
+//     imageUrl,
+//   })
+//     .then((response) => {
+//       res.status(200).json(response);
+//     })
+//     .catch((err) => {
+//       res.status(500).json(err);
+//     });
+// });
 
 /* GET - retrieves all the users from the database */
-router.get("/user", (req, res) => {
+router.get("/userprofile", (req, res) => {
   Users.find()
     .populate("owner")
     .then((allTheUsers) => {
@@ -36,7 +36,7 @@ router.get("/user", (req, res) => {
 });
 
 /* GET route => to get a specific user/detailed view */
-router.get("/user/:id", (req, res) => {
+router.get("/userprofile/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
@@ -58,7 +58,7 @@ router.get("/user/:id", (req, res) => {
 });
 
 /* PUT route => to update a specific user */
-router.put("/user/:id", (req, res) => {
+router.put("/userprofile/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
@@ -79,7 +79,7 @@ router.put("/user/:id", (req, res) => {
 });
 
 // DELETE route => to delete a specific user
-router.delete("/user/:id", (req, res) => {
+router.delete("/userprofile/:id", (req, res) => {
   const { id } = req.params;
 
   // Check if the incoming id is a valid ObjectId type
