@@ -6,15 +6,18 @@ const Pets = require("../models/pet.model");
 
 /* POST - creates a new pets*/
 router.post("/pets", (req, res) => {
-  const { animal, breed, gender, color, age, imageUrl } = req.body;
+  const { animal,petname, breed, gender, color, age, comment, imageUrl } = req.body;
   console.log("body", req.body);
+  console.log(req.user);
 
   Pets.create({
     animal,
+    petname,
     breed,
     gender,
     color,
     age,
+    comment,
     imageUrl,
     owner: req.user._id, 
   })
