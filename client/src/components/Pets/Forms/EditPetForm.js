@@ -65,7 +65,7 @@ const getSinglePet = () => {
   };
 
   return (
-    <div>
+    <div className="edit-pet-form">
       <hr />
       <h3>Edit form</h3>
       <form onSubmit={handleFormSubmit}>
@@ -75,7 +75,7 @@ const getSinglePet = () => {
           name="animal"
           value={formState.animal}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -85,7 +85,7 @@ const getSinglePet = () => {
           name="petname"
           value={formState.petname}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -95,7 +95,7 @@ const getSinglePet = () => {
           name="breed"
           value={formState.breed}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -105,7 +105,7 @@ const getSinglePet = () => {
           name="gender"
           value={formState.gender}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -115,7 +115,7 @@ const getSinglePet = () => {
           name="color"
           value={formState.color}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -125,7 +125,7 @@ const getSinglePet = () => {
           name="age"
           value={formState.age}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -135,7 +135,7 @@ const getSinglePet = () => {
           name="comment"
           value={formState.comment}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 
@@ -145,7 +145,7 @@ const getSinglePet = () => {
           name="imageUrl"
           value={formState.imageUrl}
           onChange={handleInputChange}
-          className="txtb"
+          className="txtbe"
         />
         <br />
 

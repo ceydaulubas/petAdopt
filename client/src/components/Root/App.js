@@ -91,7 +91,7 @@ function App() {
 
         <ProtectedRoute
           user={loggedInUser}
-          path="/edituser"
+          path="/edituser/:id"
           component={EditUserProfile}
           exact
         />

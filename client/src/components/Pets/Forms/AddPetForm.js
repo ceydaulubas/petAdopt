@@ -3,7 +3,7 @@ import axios from "axios";
 import { withRouter } from 'react-router-dom';
 import UploadService from "../../../services/upload-service";
 
-import video from "../../../videos/dogandchildren.mp4"
+import video from "../../../videos/option.mp4"
 
 const initialState = { animal: "", petname: "",breed: "", gender: "", color: "", age: "", comment: "", imageUrl: "" };
 

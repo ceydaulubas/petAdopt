@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const EditUserProfileForm = (props) => {
     const [formState, setFormState] = useState({
-        username: props.theUser.username,
-        email: props.theUser.email,
-        phone: props.theUser.phone,
-        // imageUrl: props.theUser.imageUrl,
     });
+    const getSingleUser = () => {
+        // get the 'id' from url via 'props.match.params' object
+        const  id  = props.loggedInUser._id;
+
+        // api call to the server to retrieve a single object
+        axios
+            .get(`http://localhost:5000/api/userprofile/${id}`, {
+                withCredentials: true,
+            })
+            .then((responseFromApi) => {
+                console.log(responseFromApi);
+                setFormState(responseFromApi.data);
+            })
+            .catch((error) => console.error(error));
+    };
+    useEffect(getSingleUser, [props.match.params]);
 
     // Function handler to submit form
     const handleFormSubmit = (event) => {

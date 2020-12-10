@@ -90,7 +90,7 @@ const UserProfilePage = (props) => {
                     <li><b>Phone:</b> {details.phone}</li>
                 </ul>
                 {ownershipCheck(details)}
-                <Link to="/edituser" className="back-to-pets-btn">Edit User</Link>
+                <Link to= {`/edituser/${details._id}`} className="back-to-pets-btn">Edit User</Link>
                 {/* <button className="back-to-pets-btn" onClick={() => {{deleteUser(detail._id)}}> Delete pet </button> */}
             </div>
             
