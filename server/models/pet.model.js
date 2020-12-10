@@ -4,6 +4,7 @@ const User = require("./user.model");
 const petSchema = new Schema(
   {
     animal: String,
+    petname:String,
     breed: String,
     gender: String,
     color: String,
