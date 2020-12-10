@@ -1,0 +1,40 @@
+.MeetMainPage{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MeetDogs{
+    background-color: rgba(233, 217, 164, 0.267);
+    width: 560px;
+    display:inline-block;
+    border: 1px solid  rgba(233, 217, 164, 0.267);
+    margin:50px;
+    margin-left:55px;
+}
+
+.MeetCats{
+    background-color: rgba(233, 217, 164, 0.267);
+    width: 560px;
+    display:inline-block;
+    border: 1px solid rgba(233, 217, 164, 0.267);
+    margin:50px;
+    margin-left:55px;
+}
+
+.site-btn-meet {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 16px 30px;
+    min-width: 153px;
+    border-radius: 50px;
+    font-weight: 500;
+    border: none;
+    background: #4d0a3a;
+    color: white;
+    cursor: pointer;
+    margin: 0 150px 50px ;
+
+  }

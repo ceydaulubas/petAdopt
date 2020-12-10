@@ -1,0 +1,85 @@
+.pet-detail {
+  width: 40%;
+  display: inline-block;
+  border: 1px solid rgb(44, 171, 202);
+  margin: 50px;
+  margin-left: 75px;
+}
+
+.pet-detail h3 {
+  margin-left: 10%;
+}
+
+.owner-detail {
+  width: 40%;
+  display: inline-block;
+  border: 1px solid rgb(173, 23, 153);
+  margin: 50px;
+  margin-left: 75px;
+}
+
+.back-to-pets-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 16px 30px;
+  min-width: 10%;
+  border-radius: 50px;
+  font-weight: 500;
+  border: none;
+  background: #97307a;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.allpets-header {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+}
+
+.allpets-list {
+  float: left;
+  width: 33.33%;
+  justify-content: space-around;
+}
+
+.allpet-list-img {
+  border-radius: 5%;
+  border: 1px solid #999;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.add-pet-form {
+  width: 300px;
+  height: 550px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  background: rgba(233, 224, 231, 0.596);
+  margin-left: 1140px;
+  margin-top: 90px;
+}
+
+.add-pet-form label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.add-pet-form h3 {
+  font-family: "Permanent Marker", cursive;
+  color: rgb(99, 8, 87);
+}
+.txtb1 {
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  border: none;
+  height: 25px;
+}

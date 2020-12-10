@@ -1,0 +1,122 @@
+.aboutPageDiv1{
+    width:75%;
+    text-align:center;
+    font-family: nunito-sans,sans-serif;
+    margin-left: 200px;
+    background-color:  rgba(250, 230, 176, 0.185);
+}
+
+.aboutPageDiv1 h1{
+color: rgb(70, 180, 199);
+padding-top: 35px;
+}
+
+.aboutPageDiv1 h2{
+color: rgb(70, 180, 199);
+}
+
+.sectionSearch{
+    float:left;
+    width:300px;
+}
+.sectionSearch p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 0;
+    margin-left: 60px;
+}
+
+.sectionMeet{
+    display: inline-block;
+    margin: 0 auto;
+    width:300px;
+}
+
+.sectionMeet p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sectionAdopt{
+    float: right;;
+    width:300px;
+}
+
+.sectionAdopt p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 60px;
+    margin-left: 0;
+}
+
+.site-btn1{
+display: inline-block;
+text-align: center;
+text-decoration: none;
+font-size: 15px;
+padding: 16px 30px;
+min-width: 153px;
+border-radius: 50px;
+font-weight: 500;
+border: none;
+background: #4d0a3a;
+color: white;
+cursor: pointer;
+margin: 50px;
+display: flex;  
+justify-content: center;  
+align-items: center; 
+}
+
+.aboutPageDiv2{
+width:75%;
+text-align:center;
+font-family: nunito-sans,sans-serif;
+margin-left: 200px;
+background-color:   rgba(250, 230, 176, 0.13);
+}
+
+.aboutPageDiv2 h1{
+color: rgb(70, 180, 199);
+padding-top: 35px;
+}
+
+.aboutPageDiv2 h2{
+color: rgb(70, 180, 199);
+}
+
+.sectionShare{
+float:left;
+width:300px;
+}
+
+.sectionShare p{
+margin-top: 40px;
+margin-bottom: 40px;
+margin-right: 0;
+margin-left: 60px;
+} 
+
+.sectionMeet2{
+display: inline-block;
+margin: 0 auto;
+width:300px;
+}
+
+.sectionMeet2 p{
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+
+.sectionDelete{
+    float: right;;
+    width:300px;
+}
+
+.sectionDelete p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 60px;
+    margin-left: 0;
+}
