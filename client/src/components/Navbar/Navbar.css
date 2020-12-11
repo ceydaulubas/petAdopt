@@ -49,9 +49,10 @@
 }
 
 .logo{
-  color:#ff1493;
+  color:#5d147a;
   float: left;
-  margin-top: 15px;
+  margin-top: 5px;
   font-weight: bold;
   font-family: Florence, cursive;
+  font-size:30px;
  }

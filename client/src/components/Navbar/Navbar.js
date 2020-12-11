@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logoImg from "../../images/PinClipart.com_ms-word-clipart_83496.png"
 
 import AuthService from "../../services/auth-service";
 
@@ -63,7 +62,7 @@ const Navbar = (props) => {
       <ul>
 
       <li className="logo">
-      🐾 LIVE with PET 🐾
+       PetAdopt
       {/* <img style={{ width: '150px', height: '50px' }}
 					src={logoImg} alt="logoImg" ></img> */}
           </li>

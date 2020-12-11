@@ -21,7 +21,7 @@ const OpeningPage = () => {
                 <h2>Why not adopt today ? </h2>
                 <p className="home-paragraph">
                   There are so many loving adoptable pets right in your community waiting for a family to call their own.
-                   <br />Find your new best friend thanks to petAdopt.
+                   <br />Find your new best friend thanks to PetAdopt.
                   </p>
                 <Link to="/signup" className="site-btn">
                   Signup
