@@ -41,7 +41,7 @@ const Signup = (props) => {
     };
 
     return (
-        <div className="signup-container" style={{ backgroundImage: `url(${Image})`, backgroundSize: "cover", width: "100%", height: "850px", }} >
+        <div className="signup-container" style={{ backgroundImage: `url(${Image})`, backgroundSize: "cover", width: "100%", height: "800px",  marginTop:"-100px"}} >
             <div className="signup-form">
                 <form onSubmit={handleFormSubmit}>
                     <h1>Sign Up</h1>

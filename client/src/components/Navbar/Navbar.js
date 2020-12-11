@@ -63,7 +63,7 @@ const Navbar = (props) => {
       <ul>
 
       <li className="logo">
-      LIVE with PET
+      🐾 LIVE with PET 🐾
       {/* <img style={{ width: '150px', height: '50px' }}
 					src={logoImg} alt="logoImg" ></img> */}
           </li>

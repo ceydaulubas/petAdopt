@@ -66,8 +66,8 @@ const getSinglePet = () => {
 
   return (
     <div className="edit-pet-form">
-      <hr />
       <h3>Edit form</h3>
+      <hr />
       <form onSubmit={handleFormSubmit}>
         <label >Animal:</label>
         <input

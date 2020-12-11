@@ -84,13 +84,13 @@ const UserProfilePage = (props) => {
             <div className="userprofile">
                 <h3>Hello,{details.username}</h3>
                 <ul>
-                    <img src={details.imageUrl} alt="userImg"  style={{  width: "50%", height: "50%" }}/>
-                    <li><b>Username:</b> {details.username}</li>
-                    <li><b>E-mail:</b> {details.email}</li>
-                    <li><b>Phone:</b> {details.phone}</li>
+                    {/* <img src={details.imageUrl} alt="userImg"  style={{  width: "50%", height: "50%" }}/> */}
+                    <li style={{ listStyleType: "none" }}><b>Username:</b> {details.username}</li>
+                    <li style={{ listStyleType: "none" }}><b>E-mail:</b> {details.email}</li>
+                    <li style={{ listStyleType: "none" }}><b>Phone:</b> {details.phone}</li>
                 </ul>
                 {ownershipCheck(details)}
-                <Link to= {`/edituser/${details._id}`} className="back-to-pets-btn">Edit User</Link>
+                <Link to= {`/edituser/${details._id}`} className="edit-user-btn">Edit User</Link>
                 {/* <button className="back-to-pets-btn" onClick={() => {{deleteUser(detail._id)}}> Delete pet </button> */}
             </div>
             

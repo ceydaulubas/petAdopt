@@ -6,7 +6,7 @@ const EditUserProfileForm = (props) => {
     });
     const getSingleUser = () => {
         // get the 'id' from url via 'props.match.params' object
-        const  id  = props.loggedInUser._id;
+        const id = props.loggedInUser._id;
 
         // api call to the server to retrieve a single object
         axios
@@ -59,40 +59,43 @@ const EditUserProfileForm = (props) => {
     };
 
     return (
-        <div>
-            <hr />
+        <div className="edit-user-form">
             <h3>Edit User form</h3>
+            <hr />
             <form onSubmit={handleFormSubmit}>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username"><b>Username:</b></label>
                 <input
                     type="text"
                     name="username"
                     value={formState.username}
                     onChange={handleInputChange}
+                    className="txtbe"
                 />
-                <label htmlFor="email">E-mail:</label>
+                <label htmlFor="email"><b>E-mail:</b></label>
                 <input
                     type="text"
                     name="email"
                     value={formState.email}
                     onChange={handleInputChange}
+                    className="txtbe"
                 />
-                <label htmlFor="phone">Phone:</label>
+                <label htmlFor="phone"><b>Phone:</b></label>
                 <input
                     type="number"
                     name="phone"
                     value={formState.phone}
                     onChange={handleInputChange}
+                    className="txtbe"
                 />
-                {/* <label htmlFor="imageUrl">Image:</label>
+                <label htmlFor="imageUrl"><b>Image:</b></label>
                 <input
                     type="text"
                     name="imageUrl"
                     value={formState.imageUrl}
                     onChange={handleInputChange}
-                /> */}
-
-                <input type="submit" value="Submit" />
+                />
+                <br />
+                <input type="submit" value="Submit" style={{ marginTop:"30px" }} />
             </form>
         </div>
     );

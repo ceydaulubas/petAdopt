@@ -87,12 +87,12 @@ console.log("props.match.params", props.match.params);
         <h3>Animal Information {details.petname}</h3>
         <ul>
           <img src={details.imageUrl} alt="pet" style={{ width: "50%", height: "50%" }} />
-          <li><b>Pet Name:</b>{details.petname}</li>
-          <li><b>Breed:</b> {details.breed}</li>
-          <li><b>Gender:</b> {details.gender}</li>
-          <li><b>Color:</b> {details.color}</li>
-          <li><b>Age:</b> {details.age}</li>
-          <li><b>Comment:</b> {details.comment}</li>
+          <li style={{ listStyleType: "none" }}><b>Pet Name:</b>{details.petname}</li>
+          <li style={{ listStyleType: "none" }}><b>Breed:</b> {details.breed}</li>
+          <li style={{ listStyleType: "none" }}><b>Gender:</b> {details.gender}</li>
+          <li style={{ listStyleType: "none" }}><b>Color:</b> {details.color}</li>
+          <li style={{ listStyleType: "none" }}><b>Age:</b> {details.age}</li>
+          <li style={{ listStyleType: "none" }}><b>Comment:</b> {details.comment}</li>
         </ul>     
         {props.loggedInUser && props.loggedInUser._id === details.owner._id && (<div> 
         <Link to={`/editpet/${details._id}`} className="back-to-pets-btn">Edit pet </Link>
@@ -106,9 +106,9 @@ console.log("props.match.params", props.match.params);
         <ul>
           <h3>Owner Information</h3>
           {/* <img src={details.owner.imageUrl} alt="pet" style={{ width: "50%", height: "50%" }} /> */}
-          <li><b>Owner Name:</b> {details.owner && details.owner.username} </li>
-          <li><b>Owner E-mail:</b> {details.owner && details.owner.email} </li>
-          <li><b>Owner Phone Number:</b> {details.owner && details.owner.phone} </li>
+          <li style={{ listStyleType: "none" }}><b>Owner Name:</b> {details.owner && details.owner.username} </li>
+          <li style={{ listStyleType: "none" }}><b>Owner E-mail:</b> {details.owner && details.owner.email} </li>
+          <li style={{ listStyleType: "none" }}><b>Owner Phone Number:</b> {details.owner && details.owner.phone} </li>
           {ownershipCheck(details)}
 
           <p>Please click to purple button to arrange a meeting with the owner

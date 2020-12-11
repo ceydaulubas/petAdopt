@@ -55,7 +55,7 @@ const AboutPage = () => {
 			</div>
 
 			<div className="aboutPageDiv2">
-				<h1> "ADOPT MY PET" JOURNEY </h1>
+				<h1> "REHOME MY PET" JOURNEY </h1>
 
 				<section className=" sectionShare">
 					{/* <Link to="/findhomepage" style={{ textDecoration: 'none' }}> */}

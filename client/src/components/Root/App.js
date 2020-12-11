@@ -56,18 +56,21 @@ function App() {
           component={AboutPage}
           exact
         />
+
         <ProtectedRoute
           user={loggedInUser}
           path="/adopt"
           component={AdoptPage}
           exact
         />
+
         <ProtectedRoute
           user={loggedInUser}
           path="/findhome"
           component={FindHomePage}
           exact
         />
+
         <ProtectedRoute
           user={loggedInUser}
           path="/pets"
@@ -96,7 +99,6 @@ function App() {
           exact
         />
 
-
         <ProtectedRoute
           user={loggedInUser}
           path="/userprofile"
@@ -116,22 +118,26 @@ function App() {
             path="/"
             component={OpeningPage}
           />
+
           <Route
             exact
             path="/signup"
             render={() => <Signup getUser={getLoggedInUser} />}
           />
+
           <Route
             exact
             path="/login"
             render={() => <Login getUser={getLoggedInUser} />}
           />
+
           <ProtectedRoute
             // user={loggedInUser}
             exact
             path="/pets"
             component={PetList}
           />
+          
           <ProtectedRoute
             user={loggedInUser}
             path="/pets/:id"
