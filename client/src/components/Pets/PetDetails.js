@@ -112,7 +112,7 @@ console.log("props.match.params", props.match.params);
           {ownershipCheck(details)}
 
           <p>Please click to purple button to arrange a meeting with the owner
-          <Link to={{ pathname: "https://calendar.google.com/calendar/u/0/r" }} target="_blank" className="back-to-pets-btn" /></p>
+          <Link to={{ pathname: "https://calendar.google.com/calendar/u/0/r" }} target="_blank" className="back-to-pets-btn" /> </p>
           {/* <Link to="/pets" className="back-to-pets-btn">Arrange a meeting with the owner</Link> */}
         </ul>
       </div>
