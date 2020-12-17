@@ -40,7 +40,7 @@ app.use(
 // Session middleware
 app.use(
   session({
-    secret: "some secret goes here",
+    secret: process.env.SESS_SECRET,
     resave: true,
     saveUninitialized: true,
   })

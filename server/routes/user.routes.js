@@ -4,24 +4,24 @@ const router = Router();
 
 const Users = require("../models/user.model");
 
-// /* POST - creates a new user*/
-// router.post("/user", (req, res) => {
-//   const { animal, breed, gender, color, age, imageUrl } = req.body;
-//   console.log("body", req.body);
+/* POST - creates a new user*/
+router.post("/user", (req, res) => {
+  const { animal, breed, gender, color, age, imageUrl } = req.body;
+  console.log("body", req.body);
 
-//   Users.create({
-//     username,
-//     email,
-//     phone,
-//     imageUrl,
-//   })
-//     .then((response) => {
-//       res.status(200).json(response);
-//     })
-//     .catch((err) => {
-//       res.status(500).json(err);
-//     });
-// });
+  Users.create({
+    username,
+    email,
+    phone,
+    imageUrl,
+  })
+    .then((response) => {
+      res.status(200).json(response);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
 
 /* GET - retrieves all the users from the database */
 router.get("/userprofile", (req, res) => {
