@@ -31,6 +31,7 @@ const Signup = (props) => {
                 const { message } = error.response.data;
                 setRegErrorMsg(message);
                 console.log(error);
+                // console.log(response);
             });
     };
 
