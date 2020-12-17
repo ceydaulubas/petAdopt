@@ -29,9 +29,7 @@ router.post("/signup", (req, res) => {
     User.findOne({ username }, (err, foundUser) => {
       // In case of any server errors that may occur
       if (err) {
-        res.status(500).json({ message: "Username check went bad." });
-        console.log(err);
-        console.log(username);
+        res.status(500).json({ message: err });
         return;
       }
   
