@@ -18,6 +18,7 @@ const connectDb = (mongoUri) =>
     })
     .catch((err) => {
       console.error("Error connecting to mongo", err);
+      console.log(MONGO_ATLAS);
     });
 
 // Check if development environment is 
