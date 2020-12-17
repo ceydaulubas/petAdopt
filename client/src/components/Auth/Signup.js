@@ -27,6 +27,7 @@ const Signup = (props) => {
                 setRegForm(initialState);
                 props.getUser(response);
                 console.log("Should go aboutpage");
+                console.log(response);
                 props.history.push("/aboutpage");
             })
             .catch((error) => {

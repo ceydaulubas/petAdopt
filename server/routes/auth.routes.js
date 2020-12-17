@@ -30,6 +30,8 @@ router.post("/signup", (req, res) => {
       // In case of any server errors that may occur
       if (err) {
         res.status(500).json({ message: "Username check went bad." });
+        console.log(err);
+        console.log(username);
         return;
       }
   
