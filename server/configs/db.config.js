@@ -3,9 +3,9 @@ const mongoose = require ("mongoose");
 const { MONGO_ATLAS, MONGO_LOCAL, NODE_ENV } = process.env;
 
 // Function to run database connection
-const connectDb = (mongoUri) =>
+const connectDb = (MONGO_ATLAS) =>
   mongoose
-    .connect(mongoUri, {
+    .connect(MONGO_ATLAS, {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
