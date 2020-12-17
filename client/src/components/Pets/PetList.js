@@ -13,9 +13,9 @@ const PetList = () => {
 
   // Function to help get all projects from the backend
   const getAllProjects = () => {
-    let requestUrl = "http://localhost:5000/api/pets"
+    let requestUrl = "https://pet-adopt-ironhack.herokuapp.com/api/pets"
     if(myParam !== null){
-      requestUrl =`http://localhost:5000/api/pets?animal=${myParam}`
+      requestUrl =`https://pet-adopt-ironhack.herokuapp.com/api/pets?animal=${myParam}`
     }
     console.log(requestUrl);
     axios

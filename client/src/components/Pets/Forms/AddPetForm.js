@@ -50,7 +50,7 @@ const AddPetForm = (props) => {
     // Make api call to the backend to save form data
     axios
       .post(
-        "http://localhost:5000/api/pets",
+        "https://pet-adopt-ironhack.herokuapp.com/api/pets",
         { animal, petname, breed, gender, color, age, comment, imageUrl },
         { withCredentials: true }
       )

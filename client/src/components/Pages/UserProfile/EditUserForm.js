@@ -10,7 +10,7 @@ const EditUserProfileForm = (props) => {
 
         // api call to the server to retrieve a single object
         axios
-            .get(`http://localhost:5000/api/userprofile/${id}`, {
+            .get(`https://pet-adopt-ironhack.herokuapp.com/api/userprofile/${id}`, {
                 withCredentials: true,
             })
             .then((responseFromApi) => {
@@ -30,7 +30,7 @@ const EditUserProfileForm = (props) => {
 
         axios
             .put(
-                `http://localhost:5000/api/user/${props.theUser._id}`,
+                `https://pet-adopt-ironhack.herokuapp.com/api/user/${props.theUser._id}`,
                 {
                     username,
                     email,

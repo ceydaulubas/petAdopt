@@ -15,7 +15,7 @@ const UserProfilePage = (props) => {
 
         // api call to the server to retrieve a single object
         axios
-            .get(`http://localhost:5000/api/userprofile/${id}`, {
+            .get(`https://pet-adopt-ironhack.herokuapp.com/api/userprofile/${id}`, {
                 withCredentials: true,
             })
             .then((responseFromApi) => {
@@ -55,7 +55,7 @@ const UserProfilePage = (props) => {
 
         // api call to the delete route in the backend
         axios
-            .delete(`http://localhost:5000/api/user/${id}`, {
+            .delete(`https://pet-adopt-ironhack.herokuapp.com/api/user/${id}`, {
                 withCredentials: true,
             })
             .then((results) => {

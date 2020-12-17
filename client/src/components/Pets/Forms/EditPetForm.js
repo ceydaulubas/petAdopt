@@ -11,7 +11,7 @@ const getSinglePet = () => {
 
   // api call to the server to retrieve a single object
   axios
-    .get(`http://localhost:5000/api/pets/${id}`, {
+    .get(`https://pet-adopt-ironhack.herokuapp.com/api/pets/${id}`, {
       withCredentials: true,
     })
     .then((responseFromApi) => {
@@ -32,7 +32,7 @@ const getSinglePet = () => {
 
     axios
       .put(
-        `http://localhost:5000/api/pets/${_id}`,
+        `https://pet-adopt-ironhack.herokuapp.com/api/pets/${_id}`,
         {
           animal,
           petname,

@@ -15,7 +15,7 @@ console.log("props.match.params", props.match.params);
     const { id } = props.match.params;
     // api call to the server to retrieve a single object
     axios
-      .get(`http://localhost:5000/api/pets/${id}`, {
+      .get(`https://pet-adopt-ironhack.herokuapp.com/api/pets/${id}`, {
         withCredentials: true,
       })
       .then((responseFromApi) => {
@@ -57,7 +57,7 @@ console.log("props.match.params", props.match.params);
     // api call to the delete route in the backend
 
     axios
-      .delete(`http://localhost:5000/api/pets/${id}`, {
+      .delete(`https://pet-adopt-ironhack.herokuapp.com/api/pets/${id}`, {
         withCredentials: true,
       })
       .then((results) => {

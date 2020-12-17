@@ -23,4 +23,3 @@ const connectDb = (mongoUri) =>
 // Check if development environment is 
 NODE_ENV === "development" ? connectDb(MONGO_LOCAL) : connectDb(MONGO_ATLAS);
 
-
