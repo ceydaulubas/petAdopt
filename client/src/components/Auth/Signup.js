@@ -12,6 +12,7 @@ const Signup = (props) => {
     const [regErrorMsg, setRegErrorMsg] = useState("");
 
     const service = new AuthService();
+    console.log("Service is created");
 
     // Form submission handler
     const handleFormSubmit = (event) => {
@@ -25,13 +26,14 @@ const Signup = (props) => {
             .then((response) => {
                 setRegForm(initialState);
                 props.getUser(response);
+                console.log("Should go aboutpage");
                 props.history.push("/aboutpage");
             })
             .catch((error) => {
                 const { message } = error.response.data;
                 setRegErrorMsg(message);
                 console.log(error);
-                // console.log(response);
+                console.log("Should get an error");
             });
     };
 
