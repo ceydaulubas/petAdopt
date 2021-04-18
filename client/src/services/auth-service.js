@@ -11,9 +11,10 @@ class AuthService {
 
   // Method to use in our SignUp component
   signup = (username, email, phone, password) => {
+    console.log("sign up")
     return this.service
       .post("/api/signup", { username, email, phone, password})
-      .then((response) => response.data);
+      .then((response) => response.data); 
   };
 
   // Method to use in our Login component

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const EditUserProfileForm = (props) => {
-    const [formState, setFormState] = useState({
-    });
+    const [userformState, setUserFormState] = useState({});
     const getSingleUser = () => {
         // get the 'id' from url via 'props.match.params' object
         const id = props.loggedInUser._id;
@@ -15,7 +14,7 @@ const EditUserProfileForm = (props) => {
             })
             .then((responseFromApi) => {
                 console.log(responseFromApi);
-                setFormState(responseFromApi.data);
+                setUserFormState(responseFromApi.data);
             })
             .catch((error) => console.error(error));
     };
@@ -26,7 +25,7 @@ const EditUserProfileForm = (props) => {
         event.preventDefault();
 
         // form state data to pass with the api call
-        const { username, email, phone } = formState;
+        const { username, email, phone,imageUrl } = userformState;
 
         axios
             .put(
@@ -35,13 +34,13 @@ const EditUserProfileForm = (props) => {
                     username,
                     email,
                     phone,
-                    //   imageUrl
+                    imageUrl
                 },
                 { withCredentials: true }
             )
             .then(() => {
                 // run method to call api method to get a single user
-                props.getThePet();
+                props.getTheUser();
 
                 // after submitting the form, 'props.history.push' can be used to redirect to 'users'
                 props.history.push("/user");
@@ -55,7 +54,7 @@ const EditUserProfileForm = (props) => {
         const { name, value } = event.target;
 
         // Set new form data
-        setFormState({ ...formState, [name]: value });
+        setUserFormState({ ...userformState, [name]: value });
     };
 
     return (
@@ -67,7 +66,7 @@ const EditUserProfileForm = (props) => {
                 <input
                     type="text"
                     name="username"
-                    value={formState.username}
+                    value={userformState.username}
                     onChange={handleInputChange}
                     className="txtbe"
                 />
@@ -75,7 +74,7 @@ const EditUserProfileForm = (props) => {
                 <input
                     type="text"
                     name="email"
-                    value={formState.email}
+                    value={userformState.email}
                     onChange={handleInputChange}
                     className="txtbe"
                 />
@@ -83,7 +82,7 @@ const EditUserProfileForm = (props) => {
                 <input
                     type="number"
                     name="phone"
-                    value={formState.phone}
+                    value={userformState.phone}
                     onChange={handleInputChange}
                     className="txtbe"
                 />
@@ -91,7 +90,7 @@ const EditUserProfileForm = (props) => {
                 <input
                     type="text"
                     name="imageUrl"
-                    value={formState.imageUrl}
+                    value={userformState.imageUrl}
                     onChange={handleInputChange}
                 />
                 <br />

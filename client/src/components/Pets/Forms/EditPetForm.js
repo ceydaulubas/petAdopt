@@ -15,7 +15,7 @@ const getSinglePet = () => {
       withCredentials: true,
     })
     .then((responseFromApi) => {
-      console.log(responseFromApi);
+      // console.log(responseFromApi);
       setFormState(responseFromApi.data);
     })
     .catch((error) => console.error(error));

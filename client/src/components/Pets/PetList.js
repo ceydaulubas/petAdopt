@@ -21,7 +21,7 @@ const PetList = () => {
     axios
       .get(requestUrl, { withCredentials: true })
       .then((responseFromApi) => {
-        console.log(responseFromApi);
+        // console.log(responseFromApi);
         setListOfPets(responseFromApi.data);
       })
       .catch((error) => console.error(error));
