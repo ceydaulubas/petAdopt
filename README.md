@@ -2,8 +2,8 @@
 
 Pet Adopt website users can adopt a cat or dog quickly or find a home to animals thanks to easy accessibility.
 
-  <img src="/mainscreen.png" width="350" alt="main screen">
-  <img src="/detailpage.png" width="350" alt="main screen">
+  <img src="/mainscreen.png" width="700" alt="main screen">
+  <img src="/detailpage.png" width="700" alt="main screen">
 
 # Tools
 
