@@ -19,7 +19,7 @@ console.log("props.match.params", props.match.params);
         withCredentials: true,
       })
       .then((responseFromApi) => {
-        console.log(responseFromApi);
+        // console.log(responseFromApi);
         setDetails(responseFromApi.data);
       })
       .catch((error) => console.error(error));

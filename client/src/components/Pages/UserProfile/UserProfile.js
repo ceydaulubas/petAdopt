@@ -19,7 +19,7 @@ const UserProfilePage = (props) => {
                 withCredentials: true,
             })
             .then((responseFromApi) => {
-                console.log(responseFromApi);
+                // console.log(responseFromApi);
                 setDetails(responseFromApi.data);
             })
             .catch((error) => console.error(error));
